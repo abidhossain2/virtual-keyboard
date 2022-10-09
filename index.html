@@ -9,12 +9,25 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
 
     <div class="text-area">
         <textarea placeholder="Write your message" cols="20" rows="10" id="write-area"></textarea>
+    </div>
+
+    <div class="emojis">
+        <button class="emoji">&#128526;</button>
+        <button class="emoji">&#128578;</button>
+        <button class="emoji">&#128525;</button>
+        <button class="emoji">&#129324;</button>
+        <button class="emoji">&#128514;</button>
+        <button class="emoji">&#128520;</button>
+        <button class="emoji">&#129313;</button>
+        <button class="emoji">&#128564;</button>
+        <button class="emoji">&#129297;</button>
     </div>
 
     <div class="keyboard-container">
@@ -45,6 +58,7 @@
                 <button id="letter">i</button>
                 <button id="letter">o</button>
                 <button id="letter">p</button>
+                <button id="emoji-icon"><i class='bx bx-smile face'></i></button>
             </div><br>
             <div class="keyboard_btn">
                 <button class="caps-lock" onclick="handleCapsLockClick()">caps lock <span
@@ -85,8 +99,9 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

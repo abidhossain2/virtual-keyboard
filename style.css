@@ -1,6 +1,7 @@
 *{  margin: 0;
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
+    background-color: #252424;
 }
 .text-area {
     width: 700px;
@@ -13,11 +14,16 @@
     padding-top: 20px;
     font-size: 17px;
     outline: none;
+    background: #242d2c;
+    border: none;
+    color: white;
+    box-shadow: 0 0 9px 2px grey;
+    border-radius: 8px;
 }
 
 .keyboard {
     width: 900px;
-    margin: 90px auto 0;
+    margin: 50px auto 0;
     background: black;
     padding: 29px;
     border-radius: 11px;
@@ -45,6 +51,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: black;
 }
 
 .keyboard_btn:last-child {
@@ -84,6 +91,14 @@
     width: 100px;
 }
 
+.keyboard_btn i {
+    background: transparent;
+}
+
+.keyboard_btn .face{
+    color: #59ff00;
+}
+
 .keyboard_btn .caps-lock {
     width: 100px;
     position: relative;
@@ -119,6 +134,27 @@
 
 .keyboard_btn #letter{
     text-transform: lowercase;
+}
+
+.emojis{
+    background: black;
+    width: 232px;
+    margin: 38px auto 0;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    position: absolute;
+    right: 4px;
+    top: 363px;
+    gap: 20px;
+    visibility: hidden;
+}
+
+.emojis button{
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 @media (max-width:1200px) {

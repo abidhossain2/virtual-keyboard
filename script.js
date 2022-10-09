@@ -15,6 +15,7 @@ letters.forEach(letter => {
     })
 })
 
+
 const handleBackSpace = () => {
     writeArea.value = writeArea.value.slice(0, -1);
 }
@@ -43,6 +44,9 @@ const handleEnterClick = () => {
 const handleSpace = () => {
     writeArea.value += " ";
 }
+
+
+
 
 // Toggle keyboard
 
@@ -117,3 +121,23 @@ function selectVoices(){
     chooseVoice.voiceIndex = voiceIndex;
 } 
 
+
+// emoji setting
+
+let emoji = document.getElementById('emoji-icon');
+let emojis = document.querySelector('.emojis');
+let emojiIcon = document.querySelectorAll('.emoji');
+
+emoji.addEventListener('click', () => {
+    if(emojis.style.visibility == 'visible'){
+        emojis.style.visibility = 'hidden';
+    }else{
+        emojis.style.visibility = 'visible';
+    }
+})
+
+emojiIcon.forEach(icon => {
+    icon.addEventListener('click', () => {
+        writeArea.value += icon.textContent;
+    })
+})
