@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="text-area">
+        <textarea placeholder="Write your message" cols="20" rows="10" id="write-area"></textarea>
+    </div>
+
+    <div class="keyboard-container">
+        <div class="keyboard">
+            <div class="keyboard_btn">
+                <button id="number">1</button>
+                <button id="number">2</button>
+                <button id="number">3</button>
+                <button id="number">4</button>
+                <button id="number">5</button>
+                <button id="number">6</button>
+                <button id="number">7</button>
+                <button id="number">8</button>
+                <button id="number">9</button>
+                <button id="number">0</button>
+                <button class="back-space" onclick="handleBackSpace()">
+                    <i class='bx bx-left-arrow-alt'></i>
+                </button>
+            </div> <br>
+            <div class="keyboard_btn">
+                <button id="letter">q</button>
+                <button id="letter">w</button>
+                <button id="letter">e</button>
+                <button id="letter">r</button>
+                <button id="letter">t</button>
+                <button id="letter">y</button>
+                <button id="letter">u</button>
+                <button id="letter">i</button>
+                <button id="letter">o</button>
+                <button id="letter">p</button>
+            </div><br>
+            <div class="keyboard_btn">
+                <button class="caps-lock" onclick="handleCapsLockClick()">caps lock <span
+                        class="active-btn"></span></button>
+                <button id="letter">a</button>
+                <button id="letter">s</button>
+                <button id="letter">d</button>
+                <button id="letter">f</button>
+                <button id="letter">g</button>
+                <button id="letter">h</button>
+                <button id="letter">j</button>
+                <button id="letter">k</button>
+                <button id="letter">l</button>
+                <button class="enter" onclick="handleEnterClick()">
+                    <i class='bx bx-subdirectory-left'></i>
+                </button>
+            </div> <br>
+            <div class="keyboard_btn">
+                <button class="check-icon" onclick="handleClose()">
+                    <i class='bx bx-check-circle'></i>
+                </button>
+                <button id="letter">z</button>
+                <button id="letter">x</button>
+                <button id="letter">c</button>
+                <button id="letter">v</button>
+                <button id="letter">b</button>
+                <button id="letter">n</button>
+                <button id="letter">m</button>
+            </div> <br>
+            <div class="keyboard_btn">
+                <button class="space-bar" onclick="handleSpace()">
+                    <i class='bx bx-space-bar'></i>
+                </button>
+                <button class="micro-phone"><i class='bx bxs-microphone'></i></button>
+                <button class="volume"><i class='bx bx-volume-low'></i></button>
+                <select id="choose-voice"></select>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
