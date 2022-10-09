@@ -58,7 +58,7 @@ writeArea.addEventListener('click', () => {
 })
 
 const handleClose = () => {
-    keyboard.style.opacity = '0'
+    keyboard.style.opacity = '0';
 }
 
 
@@ -140,4 +140,12 @@ emojiIcon.forEach(icon => {
     icon.addEventListener('click', () => {
         writeArea.value += icon.textContent;
     })
+})
+
+let cancleBtn = document.getElementById('cancle-btn');
+cancleBtn.addEventListener('click', () => {
+  
+        emojis.style.visibility = 'hidden';
+   
+    
 })

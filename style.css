@@ -1,11 +1,15 @@
-*{  margin: 0;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
     background-color: #252424;
 }
+
 .text-area {
     width: 700px;
     margin: 30px auto 0;
+    position: relative;
 }
 
 .text-area textarea {
@@ -42,9 +46,9 @@
     transition: all 0.4s ease-in-out;
 }
 
-.keyboard button:hover{
+.keyboard button:hover {
     transform: scale(0.9);
-    box-shadow:0 0px 7px 8px #3a6150;;
+    box-shadow: 0 0px 7px 8px #3a6150;
 }
 
 .keyboard_btn {
@@ -61,18 +65,20 @@
     position: relative;
 }
 
-.keyboard_btn .micro-phone{
+.keyboard_btn .micro-phone {
     position: absolute;
-    right:12px;
-}
-.keyboard_btn .volume{
-    position: absolute;
-    left:12px;
+    right: 12px;
 }
 
-.keyboard_btn #choose-voice{
+.keyboard_btn .volume {
     position: absolute;
-    left:63px;
+    left: 12px;
+}
+
+.keyboard_btn #choose-voice {
+    position: absolute;
+    left: -16px;
+    bottom: -26px;
     width: 173px;
     background: #320c0c;
     color: white;
@@ -87,6 +93,7 @@
 .keyboard_btn .check-icon {
     width: 100px;
 }
+
 .keyboard_btn .enter {
     width: 100px;
 }
@@ -95,7 +102,7 @@
     background: transparent;
 }
 
-.keyboard_btn .face{
+.keyboard_btn .face {
     color: #59ff00;
 }
 
@@ -132,12 +139,12 @@
     top: 8px;
 }
 
-.keyboard_btn #letter{
+.keyboard_btn #letter {
     text-transform: lowercase;
 }
 
-.emojis{
-    background: black;
+.emojis {
+    background: transparent;
     width: 232px;
     margin: 38px auto 0;
     padding: 22px;
@@ -145,16 +152,30 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     position: absolute;
-    right: 4px;
-    top: 363px;
+    top: 33%;
+    left: 50%;
     gap: 20px;
     visibility: hidden;
+    z-index: 1;
+    transform: translate(-50%, -50%);
 }
 
-.emojis button{
+.emojis button {
     background: transparent;
     font-size: 18px;
     cursor: pointer;
+    border: none;
+}
+
+#emoji-icon {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    color: orange;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 @media (max-width:1200px) {
@@ -162,7 +183,7 @@
         width: 700px;
         margin: auto;
     }
-    
+
     .text-area textarea {
         width: 100%;
         padding-left: 20px;
@@ -170,7 +191,7 @@
         font-size: 17px;
         outline: none;
     }
-    
+
     .keyboard {
         width: 900px;
         margin: 90px auto 0;
@@ -181,12 +202,13 @@
         transition: all 0.5s ease-in-out;
     }
 }
+
 @media (max-width:992px) {
     .text-area {
-        width: 100%;
+        width: 400px;
         margin: auto;
     }
-    
+
     .text-area textarea {
         width: 100%;
         padding-left: 20px;
@@ -194,7 +216,7 @@
         font-size: 17px;
         outline: none;
     }
-    
+
     .keyboard {
         width: 100%;
         margin: 90px auto 0;
@@ -205,12 +227,13 @@
         transition: all 0.5s ease-in-out;
     }
 }
+
 @media (max-width:768px) {
     .text-area {
-        width: 100%;
+        width: 350px;
         margin: auto;
     }
-    
+
     .text-area textarea {
         width: 100%;
         padding-left: 20px;
@@ -218,7 +241,7 @@
         font-size: 17px;
         outline: none;
     }
-    
+
     .keyboard {
         width: 100%;
         margin: 90px auto 0;
@@ -229,12 +252,13 @@
         transition: all 0.5s ease-in-out;
     }
 }
+
 @media (max-width:576px) {
     .text-area {
-        width: 100%;
+        width: 280px;
         margin: auto;
     }
-    
+
     .text-area textarea {
         width: 100%;
         padding-left: 20px;
@@ -242,7 +266,7 @@
         font-size: 17px;
         outline: none;
     }
-    
+
     .keyboard {
         width: 100%;
         margin: 90px auto 0;
